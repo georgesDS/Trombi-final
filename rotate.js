@@ -1,5 +1,4 @@
 
-
 var myIndex = 0;
 carousel();
 
@@ -18,17 +17,8 @@ function carousel() {
 
 // Code Carroussel
 
-
-/*
-* Flux 3D Carousel
-* Author: Dean Coulter
-* Licensed under the MIT license
-* 
-* Version 0.1
-*/
-
 (function($){
-$.fn.carousel3d = function(args){
+	$.fn.carousel3d = function(args){
 
   var el = ({
     carousel_frame: $(this)
@@ -85,7 +75,16 @@ $.fn.carousel3d = function(args){
     animate_slider();
 
   });
+//============= animation du caroussel image par image ================================
+function rotateGDS(){
+
+	rotate_int++;
+    animate_slider();
+	setTimeout(rotateGDS, 3000);
+  };
   
+  setTimeout(rotateGDS, 0);
+
 
 //=============  CUBE 3D  ==================================================================
 
@@ -156,7 +155,7 @@ $.fn.carousel3d = function(args){
     setTimeout(animationCube, 3000); //pour interval 3s entre chaque action
       
 }
-setTimeout(animationCube, 0);//pour lancer l'animation 
+	setTimeout(animationCube, 0);//pour lancer l'animation 
 
 
 //==============================================================
