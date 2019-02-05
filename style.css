@@ -1,0 +1,235 @@
+#page {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 1em/1.2 Calibri, Arial, Geneva, Helvetica, sans-serif;
+
+}
+
+
+.mySlides:hover {
+  opacity: 0.7;
+
+}
+
+h1 {
+
+	color: #e1e1e1;
+	font-size: 32px;
+	text-align: center;
+  font-family: Geneva;
+  border-top: double 10px white;
+  padding-top: 15px;
+}
+
+.container {
+
+	max-width: 1200px;
+	margin: 0 auto;
+  border: double 10px white;
+
+
+}
+
+article {
+	height: 600px;
+background-image: i
+
+}
+
+}
+
+header {
+	width: 100%;
+
+} 
+img {
+	max-width: 1200px;
+}
+
+footer {
+	background: white;
+	padding: 0.5em 0;
+	text-align: center;
+	max-width: 1200px;
+  width: 100%;
+	margin: 10px auto;
+  margin-bottom: 0;
+  margin-top: 100px;
+} 
+
+a{
+	color: black;
+	font-size: 22px;
+  padding: 20px;
+}
+.a{
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+
+}
+
+#perspective {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 300px;
+  height: 140px;
+  perspective: 800px;
+}
+
+#carousel {
+
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg) translateZ(-288px);
+
+}
+
+#carousel figure {
+
+  position: absolute;
+  width: -500px;
+  height: 16px;
+  opacity: 0.93;
+  margin:360px 0;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  -moz-transition: opacity 1s, -moz-transform 1s;
+  -o-transition: opacity 1s, -o-transform 1s;
+  transition: opacity 1s, transform 1s;
+}
+
+p{
+    color: white;
+    background-color: black;
+    border-top: none;
+    padding: 0 15px;
+    margin-top: 0;
+    text-align: center;
+    width: 89.5%;
+    font-size: 20px;
+}
+
+
+#cube {
+	margin-left: 340px;
+    margin-top: -550px;
+    padding: 0;
+
+
+}
+/*==========CUBE 3D============================================================================*/
+
+.ensCube { /*ensemble élèments du cube*/
+  width: 100%;
+  height: 100%;
+  padding-bottom: 200px;
+  margin-left: -140px;
+
+}
+
+.contenantCube{ 
+margin:30px auto;
+width:200px;
+height:200px;
+border-radius: 3px;
+position:relative;
+perspective:1000px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2), 0 0 40px rgba(0,0,0,0.2) inset;
+}
+
+.cube{
+width:100%;
+height:100%;
+position:absolute;
+transition: transform 1s; /*durée de la transition entre chaque face*/
+transform-style: preserve-3d;
+transform:translateZ(-150px);
+}
+
+.cube .faces{
+width:100%;
+height:100%;
+display:block;
+margin:0;
+position:absolute;
+}
+/* Pour agrandir image lorsque curseur dessus*/
+.faces:hover {
+  width: 500px;
+  height: 500px;
+  margin-top: -150px;
+  margin-left: -150px;
+  position: absolute;
+  transition: 1s;
+}
+
+.cube .faces img{
+width:100%;
+height:100%;
+object-fit: cover; /*pour que les images soient redimensionnées et adaptées à la taille du cube*/
+display:block;
+margin:0;
+}
+
+/*Définition de la position des faces: */
+.faces:nth-child(1){
+        transform:rotateY(0deg) translateZ(150px);
+}
+.faces:nth-child(2){
+        transform:rotateX(180deg ) translateZ( 150px );
+}
+.faces:nth-child(3){
+        transform:rotateY(90deg ) translateZ( 150px );
+}
+.faces:nth-child(4){
+        transform:rotateY(-90deg ) translateZ( 150px );
+}
+.faces:nth-child(5){
+        transform:rotateX(90deg ) translateZ( 150px );
+}
+.faces:nth-child(6){
+        transform:rotateX(-90deg ) translateZ( 150px );
+}
+
+/*Fonctions qui vot etre ajoutées au Javascript ey appliquées pour les rotations des faces*/
+.turncube {
+    
+        transform:translateZ( -150px ) rotateY(    0deg );
+}
+.turncube2 {
+        transform:translateZ( -150px ) rotateX( -90deg );
+      }
+.turncube6 {
+        transform:translateZ( -150px ) rotateX( -180deg );
+      }
+.turncube3 {
+        transform:translateZ( -150px ) rotateY(  -90deg );
+        }
+.turncube4 {
+        transform:translateZ( -150px ) rotateY(   90deg );
+        }
+
+.turncube5 {
+        transform:translateZ( -150px ) rotateY( -90deg );
+        }
+
+/*Noms des personnes en dessous de chaque face*/
+.nomsCube {
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  width: auto;
+}
+/*========== FIN CUBE 3D============================================================================*/
+
+
