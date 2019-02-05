@@ -44,7 +44,7 @@ $.fn.carousel3d = function(args){
 
   var rotateY = 0;
   var rotate_int = 100;
-  var ry =  378.5/size;
+  var ry =  360/size;
   var box = 0;
 
   function animate_slider(){
